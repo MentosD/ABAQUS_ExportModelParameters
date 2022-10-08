@@ -1,0 +1,338 @@
+1
+
+   Abaqus 2021                                  Date 07-10ÔÂ-2022   Time 14:25:31
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+
+
+                         The Abaqus Software is a product of:
+
+                           Dassault Systemes SIMULIA Corp.
+                           1301 Atwood Avenue, Suite 101W
+                              Johnston, RI 02919, USA
+ 
+
+
+                   The Abaqus Software is available only under license
+                   from Dassault Systemes or its subsidiary and may be
+                   used or reproduced only in accordance with the terms
+                   of such license.
+ 
+                          On machine DongXH 
+                          you are authorized to run
+                          Abaqus/Foundation until 31-Dec-2055
+
+                          Your site id is:  
+
+
+ 
+                    For assistance or any other information you may
+                    obtain contact information for your local office
+                    from the world wide web at:
+
+                      http://www.3ds.com/products/simulia/locations/
+
+ 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+                *                                                         * 
+                *                   *****************                     * 
+                *                   *  N O T I C E  *                     * 
+                *                   *****************                     * 
+                *                                                         * 
+                *                                                         * 
+                *                       Abaqus 2021                       * 
+                *                                                         * 
+                *          BUILD ID: 2020_03_06-22.50.37 167380           * 
+                *                                                         * 
+                *                                                         * 
+                *  Please make sure you are using                         * 
+                *  release Abaqus 2021 manuals                            * 
+                *  plus the notes accompanying this release.              * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                *                                                         * 
+                * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+
+
+ 
+
+
+
+     PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   *******************************************************
+
+
+     END PROCESSING PART, INSTANCE, AND ASSEMBLY INFORMATION
+   ***********************************************************
+
+
+
+
+     OPTIONS BEING PROCESSED
+   ***************************
+
+
+  *Heading
+  *Node
+  *Nset, nset=ASSEMBLY_PART-1-1_PART-1-REFPT_
+  *Node
+  *Nset, nset=ASSEMBLY_PART-2-1_PART-2-REFPT_
+  *Node
+  *Nset, nset=ASSEMBLY_PART-3-1_PART-3-REFPT_
+  *Node
+  *Nset, nset=ASSEMBLY_DIMIAN-1_DIMIAN-REFPT_
+  *Element, type=MASS
+  *Element, type=SPRING2
+  *Nset, nset=ASSEMBLY_SET-1
+  *Nset, nset=ASSEMBLY_SET-2
+  *Nset, nset=ASSEMBLY_SET-22
+  *Nset, nset=ASSEMBLY_SET-3
+  *Elset, elset=ASSEMBLY_SET-1_INERTIA-1_
+  *Elset, elset=ASSEMBLY_SET-2_INERTIA-2_
+  *Elset, elset=ASSEMBLY_SET-3_INERTIA-3_
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-SPRING
+  *Elset, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-COPY-SPRING
+  *mass, elset=ASSEMBLY_SET-1_INERTIA-1_
+  *mass, elset=ASSEMBLY_SET-2_INERTIA-2_
+  *mass, elset=ASSEMBLY_SET-3_INERTIA-3_
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-1-COPY-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-4-COPY-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-SPRING
+  *spring, elset=ASSEMBLY_SPRINGS/DASHPOTS-7-COPY-COPY-SPRING
+  *mass, elset=ASSEMBLY_SET-1_INERTIA-1_
+  *mass, elset=ASSEMBLY_SET-2_INERTIA-2_
+  *mass, elset=ASSEMBLY_SET-3_INERTIA-3_
+  *boundary
+  *boundary
+  *output, field, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *output, field, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO, perturbation
+  *frequency, eigensolver=LANCZOS, normalization=MASS, sim=YES, acousticcoupling=ON
+  *output, field, variable=PRESELECT
+  *Step, name=Step-1, nlgeom=NO, perturbation
+  *Step, name=Step-1, nlgeom=NO, perturbation
+  *frequency, eigensolver=LANCZOS, normalization=MASS, sim=YES, acousticcoupling=ON
+  *frequency, eigensolver=LANCZOS, normalization=MASS, sim=YES, acousticcoupling=ON
+  *output, field, variable=PRESELECT
+  *endstep
+  *boundary
+  *Step, name=Step-1, nlgeom=NO, perturbation
+  *frequency, eigensolver=LANCZOS, normalization=MASS, sim=YES, acousticcoupling=ON
+  *frequency, eigensolver=LANCZOS, normalization=MASS, sim=YES, acousticcoupling=ON
+  *endstep
+
+
+
+                            P R O B L E M   S I Z E
+
+
+          NUMBER OF ELEMENTS IS                                    12
+          NUMBER OF NODES IS                                        4
+          NUMBER OF NODES DEFINED BY THE USER                       4
+          TOTAL NUMBER OF VARIABLES IN THE MODEL                   12
+          (DEGREES OF FREEDOM PLUS MAX NO. OF ANY LAGRANGE MULTIPLIER
+           VARIABLES. INCLUDE *PRINT,SOLVE=YES TO GET THE ACTUAL NUMBER.)
+
+
+
+                              END OF USER INPUT PROCESSING
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.10000    
+       SYSTEM TIME (SEC)    =  0.20000    
+       TOTAL CPU TIME (SEC) =  0.30000    
+       WALLCLOCK TIME (SEC) =          0
+1
+
+   Abaqus 2021                                  Date 07-10ÔÂ-2022   Time 14:25:45
+   For use by Supplied by Team-SolidSQUAD under license from Dassault Systemes or its subsidiary.
+
+                                                                                               STEP    1  INCREMENT    1
+                                                                                          TIME COMPLETED IN THIS STEP   0.00    
+
+
+                        S T E P       1     C A L C U L A T I O N   O F   E I G E N V A L U E S
+
+                                            F O R   N A T U R A L   F R E Q U E N C I E S
+
+
+
+                                                                                          
+
+     THE LANCZOS EIGENSOLVER IS USED FOR THIS ANALYSIS
+     SYSTEM DATA WILL BE WRITTEN TO THE .SIM FILE
+
+     Abaqus WILL COMPUTE UNCOUPLED
+      STRUCTURAL AND ACOUSTIC MODES
+     NUMBER OF EIGENVALUES                     30
+     HIGHEST FREQUENCY OF INTEREST                  1.00000E+18
+     MAXIMUM NUMBER OF STEPS WITHIN RUN               35
+     BLOCK SIZE FOR LANCZOS PROCEDURE                  7
+     THE EIGENVECTORS ARE SCALED SO THAT 
+      THE GENERALIZED MASS IN EACH VECTOR IS UNITY
+
+     THIS IS A LINEAR PERTURBATION STEP.
+     ALL LOADS ARE DEFINED AS CHANGE IN LOAD TO THE REFERENCE STATE
+
+
+
+                    TOTAL MASS OF MODEL
+
+                       4.500000    
+
+
+                    LOCATION OF THE CENTER OF MASS OF THE MODEL
+
+                       0.000000           0.000000           1.777778    
+
+
+                    MOMENT OF INERTIA ABOUT THE ORIGIN
+                           I(ZZ)
+
+                       0.000000    
+
+
+                    PRODUCT OF INERTIA ABOUT THE ORIGIN
+                           I(XY)
+
+                       0.000000    
+
+
+                    MOMENT OF INERTIA ABOUT THE CENTER OF MASS
+                           I(ZZ)
+
+                       0.000000    
+
+
+                    PRODUCT OF INERTIA ABOUT THE CENTER OF MASS
+                           I(XY)
+
+                       0.000000    
+  
+                   M E M O R Y   E S T I M A T E
+  
+ PROCESS      FLOATING PT       MINIMUM MEMORY        MEMORY TO
+              OPERATIONS           REQUIRED          MINIMIZE I/O
+             PER ITERATION           (MB)               (MB)
+  
+     1          3.62E+02               18                 27
+  
+ NOTE:
+      (1) SINCE ABAQUS DOES NOT PRE-ALLOCATE MEMORY AND ONLY ALLOCATES MEMORY AS NEEDED DURING THE ANALYSIS,
+          THE MEMORY REQUIREMENT PRINTED HERE CAN ONLY BE VIEWED AS A GENERAL GUIDELINE BASED ON THE BEST
+          KNOWLEDGE AVAILABLE AT THE BEGINNING OF A STEP BEFORE THE SOLUTION PROCESS HAS BEGUN.
+      (2) THE ESTIMATE IS NORMALLY UPDATED AT THE BEGINNING OF EVERY STEP. IT IS THE MAXIMUM VALUE OF THE
+          ESTIMATE FROM THE CURRENT STEP TO THE LAST STEP OF THE ANALYSIS, WITH UNSYMMETRIC SOLUTION TAKEN
+          INTO ACCOUNT IF APPLICABLE. 
+      (3) SINCE THE ESTIMATE IS BASED ON THE ACTIVE DEGREES OF FREEDOM IN THE FIRST ITERATION OF THE 
+          CURRENT STEP, THE MEMORY ESTIMATE MIGHT BE SIGNIFICANTLY DIFFERENT THAN ACTUAL USAGE FOR 
+          PROBLEMS WITH SUBSTANTIAL CHANGES IN ACTIVE DEGREES OF FREEDOM BETWEEN STEPS (OR EVEN WITHIN
+          THE SAME STEP). EXAMPLES ARE: PROBLEMS WITH SIGNIFICANT CONTACT CHANGES, PROBLEMS WITH MODEL
+          CHANGE, PROBLEMS WITH BOTH STATIC STEP AND STEADY STATE DYNAMIC PROCEDURES WHERE ACOUSTIC 
+          ELEMENTS WILL ONLY BE ACTIVATED IN THE STEADY STATE DYNAMIC STEPS.
+      (4) FOR MULTI-PROCESS EXECUTION, THE ESTIMATED VALUE OF FLOATING POINT OPERATIONS FOR EACH PROCESS
+          IS BASED ON AN INITIAL SCHEDULING OF OPERATIONS AND MIGHT NOT REFLECT THE ACTUAL FLOATING 
+          POINT OPERATIONS COMPLETED ON EACH PROCESS. OPERATIONS ARE DYNAMICALLY BALANCED DURING EXECUTION, 
+          SO THE ACTUAL BALANCE OF OPERATIONS BETWEEN PROCESSES IS EXPECTED TO BE BETTER THAN THE ESTIMATE
+          PRINTED HERE.
+      (5) THE UPPER LIMIT OF MEMORY THAT CAN BE ALLOCATED BY ABAQUS WILL IN GENERAL DEPEND ON THE VALUE OF
+          THE "MEMORY" PARAMETER AND THE AMOUNT OF PHYSICAL MEMORY AVAILABLE ON THE MACHINE. PLEASE SEE
+          THE "ABAQUS ANALYSIS USER'S MANUAL" FOR MORE DETAILS. THE ACTUAL USAGE OF MEMORY AND OF DISK
+          SPACE FOR SCRATCH DATA WILL DEPEND ON THIS UPPER LIMIT AS WELL AS THE MEMORY REQUIRED TO MINIMIZE
+          I/O. IF THE MEMORY UPPER LIMIT IS GREATER THAN THE MEMORY REQUIRED TO MINIMIZE I/O, THEN THE ACTUAL
+          MEMORY USAGE WILL BE CLOSE TO THE ESTIMATED "MEMORY TO MINIMIZE I/O" VALUE, AND THE SCRATCH DISK
+          USAGE WILL BE CLOSE-TO-ZERO; OTHERWISE, THE ACTUAL MEMORY USED WILL BE CLOSE TO THE PREVIOUSLY
+          MENTIONED MEMORY LIMIT, AND THE SCRATCH DISK USAGE WILL BE ROUGHLY PROPORTIONAL TO THE DIFFERENCE
+          BETWEEN THE ESTIMATED "MEMORY TO MINIMIZE I/O" AND THE MEMORY UPPER LIMIT. HOWEVER ACCURATE
+          ESTIMATE OF THE SCRATCH DISK SPACE IS NOT POSSIBLE.
+      (6) USING "*RESTART, WRITE" CAN GENERATE A LARGE AMOUNT OF DATA WRITTEN IN THE WORK DIRECTORY.
+
+
+                              E I G E N V A L U E    O U T P U T     
+
+ MODE NO      EIGENVALUE              FREQUENCY         GENERALIZED MASS   COMPOSITE MODAL DAMPING            
+                             (RAD/TIME)   (CYCLES/TIME)
+
+
+       1       210.88         14.522         2.3112         1.0000         0.0000    
+       2       210.88         14.522         2.3112         1.0000         0.0000    
+       3       210.88         14.522         2.3112         1.0000         0.0000    
+       4       963.96         31.048         4.9414         1.0000         0.0000    
+       5       963.96         31.048         4.9414         1.0000         0.0000    
+       6       963.96         31.048         4.9414         1.0000         0.0000    
+       7       2125.2         46.099         7.3370         1.0000         0.0000    
+       8       2125.2         46.099         7.3370         1.0000         0.0000    
+       9       2125.2         46.099         7.3370         1.0000         0.0000    
+
+
+          P A R T I C I P A T I O N   F A C T O R S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1      -1.8729       -0.17197        0.35196        0.37040        -4.0339         0.0000    
+       2      7.42350E-02    -1.8439       -0.50592         3.9713        0.15989         0.0000    
+       3      0.38463       -0.48155         1.8115         1.0372        0.82841         0.0000    
+       4      0.57006        0.26858       -0.50264       -3.76544E-02    7.99220E-02     0.0000    
+       5     -0.56493        0.17271       -0.54842       -2.42138E-02   -7.92032E-02     0.0000    
+       6      7.50358E-02   -0.74012       -0.31037        0.10377        1.05200E-02     0.0000    
+       7     -0.27098       -0.27899       -0.19416        3.42199E-02   -3.32369E-02     0.0000    
+       8     -0.33878        0.24188        0.12525       -2.96678E-02   -4.15525E-02     0.0000    
+       9     -2.76460E-02   -0.22939        0.36821        2.81358E-02   -3.39090E-03     0.0000    
+
+
+                    E F F E C T I V E   M A S S
+
+ MODE NO    X-COMPONENT    Y-COMPONENT    Z-COMPONENT    X-ROTATION     Y-ROTATION     Z-ROTATION 
+
+       1       3.5078        2.95753E-02    0.12387        0.13720         16.273         0.0000    
+       2      5.51084E-03     3.3998        0.25595         15.771        2.55643E-02     0.0000    
+       3      0.14794        0.23189         3.2815         1.0757        0.68627         0.0000    
+       4      0.32497        7.21340E-02    0.25265        1.41785E-03    6.38753E-03     0.0000    
+       5      0.31915        2.98287E-02    0.30077        5.86309E-04    6.27315E-03     0.0000    
+       6      5.63037E-03    0.54778        9.63323E-02    1.07672E-02    1.10670E-04     0.0000    
+       7      7.34307E-02    7.78381E-02    3.76964E-02    1.17100E-03    1.10469E-03     0.0000    
+       8      0.11477        5.85067E-02    1.56883E-02    8.80177E-04    1.72661E-03     0.0000    
+       9      7.64301E-04    5.26205E-02    0.13558        7.91625E-04    1.14982E-05     0.0000    
+
+ TOTAL         4.5000         4.5000         4.5000         17.000         17.000         0.0000    
+
+
+          THE ANALYSIS HAS BEEN COMPLETED
+
+
+
+                              ANALYSIS COMPLETE
+                              WITH      1 WARNING MESSAGES ON THE MSG FILE
+
+
+
+     JOB TIME SUMMARY
+       USER TIME (SEC)      =  0.30000    
+       SYSTEM TIME (SEC)    =  0.10000    
+       TOTAL CPU TIME (SEC) =  0.40000    
+       WALLCLOCK TIME (SEC) =          1

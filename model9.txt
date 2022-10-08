@@ -1,0 +1,55 @@
+********************************************************************************
+查询数值报告, 已写入 Sat Oct  8 13:04:37 2022
+
+Source
+-------
+
+   ODB: C:/Users/dongxh/Desktop/yancong/yancong/结构动力学p98_算例4.3/Job-1.odb
+   Step: Step-1
+   Frame: Mode         9: Value =   2125.2     Freq =   7.3370     (cycles/time)
+   Variable: U, 所有直接的
+
+已报告的查询值 在结点处
+
+  Part Instance     Node ID                   Orig. Coords                                     Def. Coords                 
+                                    X               Y               Z               X               Y               Z      
+-------------------------------------------------------------------------------------------------------------------------
+    ASSEMBLY  PART-1-1.1              0.              0.              1.      -0.0326401        -0.27083         1.43473
+    ASSEMBLY  PART-2-1.1              0.              0.              2.       0.0340089        0.282188         1.54704
+    ASSEMBLY  PART-3-1.1              0.              0.              3.      -0.0133791       -0.111013         3.17819
+    ASSEMBLY  DIMIAN-1.1              0.              0.              0.              0.              0.              0.
+    DIMIAN-1           1              0.              0.              0.              0.              0.              0.
+    PART-1-1           1              0.              0.              1.      -0.0326401        -0.27083         1.43473
+    PART-2-1           1              0.              0.              2.       0.0340089        0.282188         1.54704
+    PART-3-1           1              0.              0.              3.      -0.0133791       -0.111013         3.17819
+
+
+  Part Instance     Node ID  Attached elements           U, U1           U, U2           U, U3
+-----------------------------------------------------------------------------------------------
+    ASSEMBLY  PART-1-1.1               1         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               4         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               7         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               5         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               8         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               6         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-1-1.1               9         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1               2         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1               7         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1              10         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1               8         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1              11         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1               9         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-2-1.1              12         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-3-1.1               3         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-3-1.1              10         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-3-1.1              11         NoValue         NoValue         NoValue
+    ASSEMBLY  PART-3-1.1              12         NoValue         NoValue         NoValue
+    ASSEMBLY  DIMIAN-1.1               4         NoValue         NoValue         NoValue
+    ASSEMBLY  DIMIAN-1.1               5         NoValue         NoValue         NoValue
+    ASSEMBLY  DIMIAN-1.1               6         NoValue         NoValue         NoValue
+    DIMIAN-1           1          Elem-1              0.              0.              0.
+    PART-1-1           1          Elem-1      -0.0326401        -0.27083        0.434728
+    PART-2-1           1          Elem-1       0.0340089        0.282188       -0.452959
+    PART-3-1           1          Elem-1      -0.0133791       -0.111013        0.178195
+
+

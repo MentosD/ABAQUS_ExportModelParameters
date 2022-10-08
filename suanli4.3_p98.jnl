@@ -1,0 +1,208 @@
+# -*- coding: mbcs -*-
+from part import *
+from material import *
+from section import *
+from assembly import *
+from step import *
+from interaction import *
+from load import *
+from mesh import *
+from optimization import *
+from job import *
+from sketch import *
+from visualization import *
+from connectorBehavior import *
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].ReferencePoint(point=(0.0, 0.0, 1.0))
+mdb.models['Model-1'].rootAssembly.DatumCsysByDefault(CARTESIAN)
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-1', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-2', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.instances['Part-1-2'].translate(vector=(0.0, 
+    0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-3', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.instances['Part-1-3'].translate(vector=(0.0, 
+    0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-4', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.instances['Part-1-4'].translate(vector=(0.0, 
+    0.0, 0.0))
+del mdb.models['Model-1'].parts['Part-1']
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-1', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-1'].ReferencePoint(point=(0.0, 0.0, 1.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-2', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-2'].ReferencePoint(point=(0.0, 0.0, 2.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='Part-3', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['Part-3'].ReferencePoint(point=(0.0, 0.0, 3.0))
+mdb.models['Model-1'].rootAssembly.regenerate()
+del mdb.models['Model-1'].rootAssembly.features['Part-1-1']
+del mdb.models['Model-1'].rootAssembly.features['Part-1-2']
+del mdb.models['Model-1'].rootAssembly.features['Part-1-3']
+del mdb.models['Model-1'].rootAssembly.features['Part-1-4']
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-1-1', 
+    part=mdb.models['Model-1'].parts['Part-1'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-2-1', 
+    part=mdb.models['Model-1'].parts['Part-2'])
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='Part-3-1', 
+    part=mdb.models['Model-1'].parts['Part-3'])
+mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].translate(vector=(0.0, 
+    0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.instances['Part-3-1'].translate(vector=(0.0, 
+    0.0, 0.0))
+mdb.models['Model-1'].Part(dimensionality=THREE_D, name='dimian', type=
+    DEFORMABLE_BODY)
+mdb.models['Model-1'].parts['dimian'].ReferencePoint(point=(0.0, 0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.Instance(dependent=ON, name='dimian-1', 
+    part=mdb.models['Model-1'].parts['dimian'])
+mdb.models['Model-1'].rootAssembly.instances['dimian-1'].translate(vector=(0.0, 
+    0.0, 0.0))
+mdb.models['Model-1'].rootAssembly.Set(name='Set-1', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].referencePoints[1], 
+    ))
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.PointMassInertia(alpha=
+    0.0, composite=0.0, mass=2.0, name='Inertia-1', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-1'])
+mdb.models['Model-1'].rootAssembly.Set(name='Set-2', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].referencePoints[1], 
+    ))
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.PointMassInertia(alpha=
+    0.0, composite=0.0, mass=1.5, name='Inertia-2', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-2'])
+mdb.models['Model-1'].rootAssembly.Set(name='Set-3', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-3-1'].referencePoints[1], 
+    ))
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.PointMassInertia(alpha=
+    0.0, composite=0.0, mass=1.0, name='Inertia-3', region=
+    mdb.models['Model-1'].rootAssembly.sets['Set-3'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.TwoPointSpringDashpot(
+    axis=FIXED_DOF, dashpotBehavior=OFF, dashpotCoefficient=0.0, dof1=1, dof2=1
+    , name='Springs/Dashpots-1', orientation=None, regionPairs=((Region(
+    referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].referencePoints[1], 
+    )), Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['dimian-1'].referencePoints[1], 
+    ))), ), springBehavior=ON, springStiffness=1800.0)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1'].setValues(
+    dof1=2, dof2=2)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1'].setValues(
+    dof1=1, dof2=1)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-1-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1-Copy'].setValues(
+    dof1=2, dof2=2)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-1-Copy-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1-Copy'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-1-Copy-Copy'].setValues(
+    dof1=3, dof2=3)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.TwoPointSpringDashpot(
+    axis=FIXED_DOF, dashpotBehavior=OFF, dashpotCoefficient=0.0, dof1=1, dof2=1
+    , name='Springs/Dashpots-4', orientation=None, regionPairs=((Region(
+    referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].referencePoints[1], 
+    )), Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-1-1'].referencePoints[1], 
+    ))), ), springBehavior=ON, springStiffness=1200.0)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-4-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-4'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-4-Copy'].setValues(
+    dof1=2, dof2=2)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-4-Copy-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-4-Copy'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-4-Copy-Copy'].setValues(
+    dof1=3, dof2=3)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.TwoPointSpringDashpot(
+    axis=FIXED_DOF, dashpotBehavior=OFF, dashpotCoefficient=0.0, dof1=1, dof2=1
+    , name='Springs/Dashpots-7', orientation=None, regionPairs=((Region(
+    referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-3-1'].referencePoints[1], 
+    )), Region(referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['Part-2-1'].referencePoints[1], 
+    ))), ), springBehavior=ON, springStiffness=600.0)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-7-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-7'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-7-Copy'].setValues(
+    dof1=2, dof2=2)
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.SpringDashpot(name=
+    'Springs/Dashpots-7-Copy-Copy', objectToCopy=
+    mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-7-Copy'])
+mdb.models['Model-1'].rootAssembly.engineeringFeatures.springDashpots['Springs/Dashpots-7-Copy-Copy'].setValues(
+    dof1=3, dof2=3)
+mdb.models['Model-1'].rootAssembly.Set(name='Set-22', referencePoints=(
+    mdb.models['Model-1'].rootAssembly.instances['dimian-1'].referencePoints[1], 
+    ))
+mdb.models['Model-1'].EncastreBC(createStepName='Initial', localCsys=None, 
+    name='BC-1', region=mdb.models['Model-1'].rootAssembly.sets['Set-22'])
+mdb.models['Model-1'].FrequencyStep(blockSize=DEFAULT, maxBlocks=DEFAULT, 
+    minEigen=None, name='Step-1', numEigen=30, previous='Initial')
+mdb.models['Model-1'].fieldOutputRequests['F-Output-1'].setValues(position=
+    NODES)
+mdb.Job(atTime=None, contactPrint=OFF, description='', echoPrint=OFF, 
+    explicitPrecision=SINGLE, getMemoryFromAnalysis=True, historyPrint=OFF, 
+    memory=90, memoryUnits=PERCENTAGE, model='Model-1', modelPrint=OFF, 
+    multiprocessingMode=DEFAULT, name='Job-1', nodalOutputPrecision=SINGLE, 
+    numCpus=1, numGPUs=0, queue=None, resultsFormat=ODB, scratch='', type=
+    ANALYSIS, userSubroutine='', waitHours=0, waitMinutes=0)
+mdb.jobs['Job-1'].submit(consistencyChecking=OFF)
+mdb.jobs['Job-1']._Message(STARTED, {'phase': BATCHPRE_PHASE, 
+    'clientHost': 'DongXH', 'handle': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FILE, {'phase': BATCHPRE_PHASE, 
+    'file': 'C:\\Users\\dongxh\\Desktop\\29m\xd1\xcc\xb4\xd1\\29m\xd1\xcc\xb4\xd1\\test\\Job-1.odb', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': BATCHPRE_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STARTED, {'phase': STANDARD_PHASE, 
+    'clientHost': 'DongXH', 'handle': 15988, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MEMORY_ESTIMATE, {'phase': STANDARD_PHASE, 
+    'jobName': 'Job-1', 'memory': 27.0})
+mdb.jobs['Job-1']._Message(PHYSICAL_MEMORY, {'phase': STANDARD_PHASE, 
+    'physical_memory': 16198.0, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(MINIMUM_MEMORY, {'minimum_memory': 18.0, 
+    'phase': STANDARD_PHASE, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(WARNING, {'phase': STANDARD_PHASE, 
+    'message': 'ONLY 9 EIGENMODES WILL BE EXTRACTED BECAUSE THERE ARE NO MORE UNRESTRAINED DEGREES OF FREEDOM', 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 1, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 2, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 3, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 4, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 5, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 6, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 7, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 8, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(ODB_FRAME, {'phase': STANDARD_PHASE, 'step': 0, 
+    'frame': 9, 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(STATUS, {'totalTime': 0.0, 'attempts': 1, 
+    'timeIncrement': 1e-36, 'increment': 1, 'stepTime': 1e-36, 'step': 1, 
+    'jobName': 'Job-1', 'severe': 0, 'iterations': 0, 'phase': STANDARD_PHASE, 
+    'equilibrium': 0})
+mdb.jobs['Job-1']._Message(END_STEP, {'phase': STANDARD_PHASE, 'stepId': 1, 
+    'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(COMPLETED, {'phase': STANDARD_PHASE, 
+    'message': 'Analysis phase complete', 'jobName': 'Job-1'})
+mdb.jobs['Job-1']._Message(JOB_COMPLETED, {'time': 'Fri Oct  7 14:25:49 2022', 
+    'jobName': 'Job-1'})
+# Save by dongxh on 2022_10_07-14.36.55; build 2021 2020_03_06-22.50.37 167380
+# Save by dongxh on 2022_10_07-14.36.58; build 2021 2020_03_06-22.50.37 167380
