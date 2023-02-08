@@ -1,6 +1,9 @@
 # ABAQUS_ExportModelParameters
 用置大数比划零置一好用
 
+看Example文件夹，时程分析结果相近，Abaqus用的HHT算法，Matlab用的Newmark算法
+
+
 例如：
 
 izc=[25,26,27,52,53,54,79,80,81];
